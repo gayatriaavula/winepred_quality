@@ -53,7 +53,7 @@ def loadModels(sc):
     return model_dt, model_rf
 
 def loadCleanData(spark):
-    bucket_name = 'neel-cs643'
+    bucket_name = 'ga348-cs643'
     file_key = "ValidationDataset.csv"
     dataset_path = "s3a://"+bucket_name+"/"+file_key
     validation = spark.read.csv(dataset_path, inferSchema=True, header=True, sep=';')
